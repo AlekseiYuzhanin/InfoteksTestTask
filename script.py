@@ -3,9 +3,12 @@
 import os
 import datetime
 import subprocess
+import sys
+
+args = sys.argv
 
 config = {}
-with open("script.config",'r') as f:
+with open(args[1],'r') as f:
     lines = f.readlines()
     for line in lines:
         key,value = line.strip().split('=')
